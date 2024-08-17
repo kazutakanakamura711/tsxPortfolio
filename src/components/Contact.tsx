@@ -1,11 +1,11 @@
-import { CategoryTitle } from "./CategoryTitle"
-import contactImage from '../assets/images/contact.jpg'
-import { FaInstagram, FaTwitter } from 'react-icons/fa'
+import { CategoryTitle } from './CategoryTitle';
+import contactImage from '../assets/images/contact.jpg';
+import { FaInstagram, FaTwitter } from 'react-icons/fa';
 
 export const Contact = () => {
   return (
     <>
-      <CategoryTitle categoryTitle='CONTACT' />
+      <CategoryTitle categoryTitle="CONTACT" />
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:flex-1 mb-4">
           <img src={contactImage} alt="WorksImage" />
@@ -19,5 +19,5 @@ export const Contact = () => {
         <FaInstagram size={40} />
       </div>
     </>
-  )
-}
+  );
+};

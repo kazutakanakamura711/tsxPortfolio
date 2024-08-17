@@ -1,17 +1,17 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import memoryWeaknessImage from '../assets/images/memoryWeakness.png'
-import nuxtSlotImage from '../assets/images/nuxtSlot.png'
-import forKidsImage from '../assets/images/forKids.png'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+import memoryWeaknessImage from '../assets/images/memoryWeakness.png';
+import nuxtSlotImage from '../assets/images/nuxtSlot.png';
+import forKidsImage from '../assets/images/forKids.png';
 
 interface SlideList {
-  title: string,
-  githubUrl: string,
-  technologyUsed: string,
-  img: string,
-  appUrl: string,
-  alt: string
+  title: string;
+  githubUrl: string;
+  technologyUsed: string;
+  img: string;
+  appUrl: string;
+  alt: string;
 }
 
 const settings = {
@@ -20,7 +20,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,      // 自動再生を有効にする
+  autoplay: true, // 自動再生を有効にする
   autoplaySpeed: 3000, // 3秒ごとにスライドする
 };
 
@@ -47,9 +47,9 @@ const slideList: SlideList[] = [
     technologyUsed: 'Nuxt,Vue',
     img: forKidsImage,
     appUrl: 'https://programming-go.netlify.app/',
-    alt: 'forKidsImage'
-  }
-]
+    alt: 'forKidsImage',
+  },
+];
 
 export const Slide = () => {
   return (
@@ -61,17 +61,27 @@ export const Slide = () => {
               <p>{slide.title}</p>
               <p>{slide.technologyUsed}</p>
               <p>
-                <a href={slide.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a
+                  href={slide.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
               </p>
             </div>
             <div className="w-full h-2/3 mb-4 image-container">
               <a href={slide.appUrl} target="_blank" rel="noopener noreferrer">
-                <img src={slide.img} alt={slide.alt} className="h-full w-full object-cover" />
+                <img
+                  src={slide.img}
+                  alt={slide.alt}
+                  className="h-full w-full object-cover"
+                />
               </a>
             </div>
           </div>
         ))}
       </Slider>
     </div>
-  )
-}
+  );
+};
